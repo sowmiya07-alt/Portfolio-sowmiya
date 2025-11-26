@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ...
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script> <!-- ADD HERE OK -->
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+<div id="root"></div>
+
+    <div id="particles-js"></div>  <!-- PARTICLES BACKGROUND -->
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div> <!-- React App -->
+
+    <script>
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 70 },
+          "size": { "value": 3 },
+          "color": { "value": "#ffffff" },
+          "line_linked": {
+            "enable": true,
+            "color": "#ffffff"
+          },
+          "move": { "speed": 2 }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+header {
+  position: relative;
+  z-index: 1;   /* Header comes above particles */
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;  /* Particles stay behind everything */
+  top: 0;
+  left: 0;
+}
+
+
+
+header {
+  height: 100%;
+  padding-top: 7rem;
+  overflow: hidden;
+}
+
+.header__links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: none;
+  z-index: 50;
+  background: rgba(2,6,20,0.55);
+  padding: 0 1rem;
+  border-radius: 0px;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  height: 64px; /* fixed nav height used to space header content */
+  align-items: center;
+}
+
+.header__links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header__links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-evenly;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__links a:hover {
+  color: var(--color-primary);
+}
+
+/* Colorful link styles - each section gets a distinct gradient */
+.header__links .nav-link {
+  color: #fff;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+  opacity: 0.98;
+  display: inline-block;
+  text-align: center;
+}
+
+.header__links .nav-link.active {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.header__links .nav-link:hover {
+  transform: translateY(-4px);
+  opacity: 1;
+}
+
+/* Individual colors/gradients */
+.header__links .home { background: linear-gradient(135deg,#1e90ff,#00bfff); }
+.header__links .about { background: linear-gradient(135deg,#6a11cb,#2575fc); }
+.header__links .skills { background: linear-gradient(135deg,#ff7e5f,#feb47b); }
+.header__links .portfolio { background: linear-gradient(135deg,#43cea2,#185a9d); }
+.header__links .testimonials { background: linear-gradient(135deg,#f6d365,#fda085); }
+.header__links .contact { background: linear-gradient(135deg,#ff5f6d,#ffc371); }
+
+/* Slightly smaller and stacked on very small screens */
+@media screen and (max-width: 420px){
+  .header__links ul { gap: 0.6rem; }
+  .header__links .nav-link { padding: 0.45rem 0.7rem; font-size: 0.95rem; }
+}
+
+/* separator removed per user request */
+
+/* Ensure nav doesn't overlap header content when spanning full width */
+@media screen and (min-width: 601px) {
+  .header__container { padding-top: 4.2rem; }
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  /* Push content below the fixed nav; change the +1.5rem to adjust desired gap */
+  padding-top: calc(64px + 1.5rem);
+}
+
+/* Space between nav and the main headline */
+.header__container > h1 {
+  margin-top: 0; /* spacing handled by container padding */
+  font-size: 2.4rem;
+}
+
+/* Hero background gradient overlay */
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(6,12,30,0.98) 0%, rgba(7,20,40,0.95) 40%, rgba(8,24,46,0.8) 100%);
+}
+
+/* Push header content below the top nav so it doesn't overlap */
+.header__container {
+  padding-top: 3rem;
+}
+
+/* Ensure header container has enough top padding so nav doesn't overlap content */
+@media screen and (min-width: 601px) {
+  header {
+    padding-top: 5.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__links {
+    position: static;
+    transform: none;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  .header__links ul {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header__container {
+    padding-top: 0;
+  }
+  .header__container > h1 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+
+/* CTA subtle animation */
+@keyframes cta-pulse {
+  0% { transform: translateY(0); box-shadow: 0 6px 16px rgba(77,181,255,0.04); }
+  50% { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(77,181,255,0.08); }
+  100% { transform: translateY(0); box-shadow: 0 6px 16px rgba(77,181,255,0.04); }
+}
+.cta .btn-primary {
+  animation: cta-pulse 3s ease-in-out infinite;
+}
+
+/* Stronger, unique gradients per nav item and clearer active/hover styles */
+.header__links .nav-link {
+  padding: 0.55rem 1.05rem;
+  font-size: 0.98rem;
+  border-radius: 10px;
+  transition: transform .18s ease, box-shadow .18s ease, opacity .12s ease, filter .18s ease;
+  filter: saturate(1.05);
+}
+
+.header__links .nav-link:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+}
+
+/* vivid gradients */
+.header__links .home { background: linear-gradient(135deg,#0072ff,#00d4ff); }
+.header__links .about { background: linear-gradient(135deg,#8e2de2,#4a00e0); }
+.header__links .skills { background: linear-gradient(135deg,#ff416c,#ff4b2b); }
+.header__links .portfolio { background: linear-gradient(135deg,#00b09b,#96c93d); }
+.header__links .testimonials { background: linear-gradient(135deg,#f7971e,#ffd200); }
+.header__links .contact { background: linear-gradient(135deg,#f953c6,#b91d73); }
+
+.header__links .nav-link.active {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+  opacity: 1;
+  outline: 3px solid rgba(255,255,255,0.06);
+}
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 5rem;
+  bottom: 1rem;
+}
+
+.header__socials::after {
+  content: '';
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+.scroll__down {
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px){
+  header {
+    height: 68vh;
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  header {
+    height: 100vh;
+  }
+
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+}
+
