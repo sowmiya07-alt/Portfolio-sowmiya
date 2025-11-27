@@ -11,27 +11,27 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage(true);
-    emailjs
-      .sendForm(
-        'service_k2qawqh',
-        'template_c6rkpn6',
-        formRef.current,
-        'X7K7ebhIeOy3YwHki'
-      )
+    emailjs.sendForm(
+      "service_rnph6jk",
+      "template_gwsg6es",
+      formRef.current,
+      "SkgNSyCfQc7K7aCff"
+    )
       .then(
         (result) => {
           console.log(result.text);
+          alert("SUCCESS! Email sent. Response: " + result.text);
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
+          alert("FAILED... Error: " + error.text);
         }
       );
-
-    e.target.reset();
   };
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
+      <h5>Get In Touch (DEBUG MODE)</h5>
       <h5>
         I do receive your messages and will respond asap if the valid email is
         provided :)
@@ -57,13 +57,13 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Your Email"
-             color="black"
+            color="black"
             name="user_email"
             required
           />
           <textarea
             placeholder="Your message"
-             color="black"
+            color="black"
             rows="7"
             name="message"
             required
