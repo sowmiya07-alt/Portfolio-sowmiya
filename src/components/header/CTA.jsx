@@ -1,7 +1,7 @@
 import React from 'react';
 
-// Place your CV file at `public/cv.pdf` and the link below will download it.
-const CV = '/cv.pdf';
+// CV hosted on Google Drive
+const CV = 'https://drive.google.com/uc?export=download&id=15ZgEB3QZSTEb2Y-3ajrTFi4qZjuocCIh';
 
 const CTA = () => {
   return (

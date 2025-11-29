@@ -12,6 +12,7 @@ import Topbar from './components/topbar/Topbar';
 import Nav from './components/nav/Nav';
 import PageTransition from './components/PageTransition';
 import HamburgerMenu from './components/hamburger/HamburgerMenu';
+import MusicPlayer from './components/music/MusicPlayer';
 
 import Background from './components/background/Background';
 
@@ -23,6 +24,7 @@ const App = () => {
       <Background />
       <HamburgerMenu />
       <Topbar />
+      <MusicPlayer />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={

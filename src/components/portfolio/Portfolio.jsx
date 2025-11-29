@@ -18,8 +18,7 @@ const Portfolio = () => {
       description:
         "Skill Connect is a platform that connects blue-collar job seekers with employers, enabling seamless access to skilled work opportunities.",
       technologies: "Html | CSS | Javascript | Flutter| AWS",
-      link: "https://educational-website-reactjs.netlify.app/",
-     
+      github: "https://github.com/sowmiya07-alt",
     },
     {
       id: 2,
@@ -28,8 +27,7 @@ const Portfolio = () => {
       description:
         "Fashionista is a customization-first fashion platform that connects users with boutiques, enabling personalized designs and tailored fabric choices.",
       technologies: "HTML | CSS | JavaScript | Express Js | Firebase",
-      link: "https://drive.google.com/file/d/156ZN30VQulhsiGVq4kXxEH7xkPRYxmD8/view?usp=drive_link",
-     
+      github: "https://github.com/sowmiya07-alt",
     },
     {
       id: 3,
@@ -37,8 +35,7 @@ const Portfolio = () => {
       img: IMG2,
       description: "A seamless food delivery platform that connects users with nearby restaurants, offering fast ordering and doorstep delivery like Swiggy and Zomato.",
       technologies: "HTML | CSS | JavaScript",
-      link: "file:///C:/Users/SOWMIYA/Desktop/food_ordering_web/index.html",
-      
+      github: "https://github.com/sowmiya07-alt",
     },
     {
       id: 4,
@@ -47,8 +44,7 @@ const Portfolio = () => {
       description:
         "Route Mate is a real-time bus tracking platform that provides live arrival updates, seat availability, and complete route information for effortless travel.",
       technologies: "Html | CSS | JavaScript | Next Js",
-      link: "https://alpha-agency-project.vercel.app/",
-      
+      github: "https://github.com/sowmiya07-alt",
     },
     {
       id: 5,
@@ -57,8 +53,7 @@ const Portfolio = () => {
       description:
         "Heal On is an online healthcare platform that enables virtual doctor consultations, medicine ordering, and real-time medicine availability checks.",
       technologies: "Html | Styled-components | Typescript",
-      link: "https://jokes-project.vercel.app/",
-      
+      github: "https://github.com/sowmiya07-alt",
     },
     {
       id: 6,
@@ -67,8 +62,7 @@ const Portfolio = () => {
       description:
         "A user-friendly stationery platform where customers can browse, select, and order all types of stationery items online.",
       technologies: "Html | Scss | Javascript",
-      link: "https://fs-poster-project.vercel.app/",
-      
+      github: "https://github.com/sowmiya07-alt",
     },
   ];
 
@@ -97,14 +91,7 @@ const Portfolio = () => {
               >
                 GitHub
               </a>
-              <a
-                href={pro.link}
-                target="_blank"
-                className="btn btn-primary"
-                rel="noreferrer"
-              >
-                Live Demo
-              </a>
+
             </div>
           </article>
         ))}
